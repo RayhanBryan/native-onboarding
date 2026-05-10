@@ -173,13 +173,12 @@ if (track) {
 
   testimonials.forEach((t, i) => {
     const card = document.createElement("div");
-    card.className = "carousel-card";
+    card.className = "carousel-card" + (i === 0 ? " active" : "");
     card.innerHTML = `
       <div class="carousel-card-header">
         <span class="carousel-card-name">${t.name}</span>
         <span class="carousel-card-meta">${t.role}<span class="dot"></span>${t.company}</span>
       </div>
-      <div class="carousel-card-divider"></div>
       <p class="carousel-card-review">${t.review}</p>
       <a href="${t.linkedin}" target="_blank" rel="noopener noreferrer" class="carousel-card-linkedin">${linkedinIcon}</a>
     `;
@@ -194,8 +193,11 @@ if (track) {
 
   function goTo(index) {
     currentIndex = index;
-    const cardWidth = track.children[0].offsetWidth + 24; // card + gap
+    const cardWidth = track.children[0].offsetWidth;
     track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    document.querySelectorAll(".carousel-card").forEach((c, i) => {
+      c.classList.toggle("active", i === currentIndex);
+    });
     document.querySelectorAll(".carousel-dot").forEach((d, i) => {
       d.classList.toggle("active", i === currentIndex);
     });

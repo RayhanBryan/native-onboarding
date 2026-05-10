@@ -920,6 +920,8 @@ section {
   gap: 2rem;
   align-items: flex-start;
   margin-top: 2.5rem;
+  position: relative;
+  padding-bottom: 56px;
 }
 
 .carousel-sidebar {
@@ -942,7 +944,7 @@ section {
   align-items: center;
   gap: 0.5rem;
   background: var(--primary-500-base);
-  color: var(--secondary-900);
+  color: var(--base-white);
   padding: 0.5rem 1rem;
   border-radius: 6px;
   font-family: Inter, sans-serif;
@@ -953,9 +955,6 @@ section {
   transition: background 0.2s;
   width: 100%;
 }
-.carousel-linkedin-btn:hover {
-  background: var(--primary-600);
-}
 
 .carousel-track-wrap {
   flex: 1;
@@ -965,21 +964,32 @@ section {
 
 .carousel-track {
   display: flex;
-  gap: 1.5rem;
+  gap: 0;
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform;
 }
 
 .carousel-card {
-  background: var(--base-white);
-  border: 1px solid var(--gray-200);
-  border-radius: 12px;
-  padding: 2rem;
-  min-width: 400px;
-  max-width: 400px;
-  box-shadow: 0px 4px 10px rgba(16, 24, 40, 0.06);
+  background: transparent;
+  border: none;
+  border-right: 2px solid var(--gray-300);
+  border-radius: 0;
+  padding: 0 2rem;
+  width: 80%;
+  min-width: 80%;
+  max-width: 80%;
+  box-shadow: none;
   flex-shrink: 0;
-  transition: opacity 0.3s;
+  transition: opacity 0.4s;
+  opacity: 0.3;
+}
+
+.carousel-card:last-child {
+  border-right: none;
+}
+
+.carousel-card.active {
+  opacity: 1;
 }
 
 .carousel-card-header {
@@ -1015,10 +1025,7 @@ section {
 }
 
 .carousel-card-divider {
-  width: 100%;
-  height: 1px;
-  background: var(--gray-200);
-  margin-bottom: 1.25rem;
+  display: none;
 }
 
 .carousel-card-review {
@@ -1054,7 +1061,7 @@ section {
   flex-shrink: 0;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: 10%;
   background: var(--secondary-500);
   color: var(--base-white);
   border: none;
@@ -1063,9 +1070,11 @@ section {
   align-items: center;
   justify-content: center;
   transition: background 0.2s;
-  z-index: 2;
   position: absolute;
-  bottom: 20px;
+  right: 0;
+  top: 35%;
+  transform: translateY(-50%);
+  z-index: 10;
 }
 .carousel-arrow:hover {
   background: var(--secondary-700);
@@ -1090,6 +1099,290 @@ section {
 }
 .carousel-dot.active {
   background: var(--secondary-500);
+}
+
+/* ============================================================
+   BOEK DE TRAINING SECTION
+   ============================================================ */
+.boek-section {
+  background: var(--base-white);
+  padding: 5rem 0;
+}
+
+.boek-inner {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+.boek-image-wrap {
+  flex: 0 0 620px;
+  position: relative;
+  border-radius: 12px;
+  overflow: visible;
+}
+
+.boek-image {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+.boek-book-overlay {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.boek-book-img {
+  width: 130px;
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.25));
+}
+
+.boek-gratis-badge {
+  background: var(--secondary-500);
+  color: var(--base-white);
+  font-family: Futura, Inter, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 0.35rem 1.25rem;
+  border-radius: 6px;
+}
+
+.boek-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.boek-subtitle {
+  font-family: Futura, Inter, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--secondary-500);
+  letter-spacing: 0.02em;
+}
+
+.boek-title {
+  font-family: Futura, Inter, sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--primary-500-base);
+  text-transform: uppercase;
+}
+
+.boek-desc {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: var(--gray-600);
+}
+
+.boek-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.boek-btn-primary {
+  background: var(--primary-500-base);
+  color: var(--base-white);
+  border: none;
+  padding: 12px 28px;
+  font-family: Futura, Inter, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border-radius: 8px;
+}
+.boek-btn-primary:hover {
+  background: var(--primary-600);
+}
+
+.boek-btn-outline {
+  background: transparent;
+  color: var(--primary-500-base);
+  border: 2px solid var(--primary-500-base);
+  padding: 12px 28px;
+  font-family: Futura, Inter, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border-radius: 8px;
+}
+.boek-btn-outline:hover {
+  background: var(--primary-50);
+  transform: translateY(-2px);
+}
+
+/* ============================================================
+   UNIQUE LEADERSHIP SECTION
+   ============================================================ */
+.unique-section {
+  background: var(--primary-500-base);
+  padding: 5rem 0;
+}
+
+.unique-title {
+  color: var(--base-white);
+  font-family: Futura, Inter, sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: -0.96px;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+
+.unique-body {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.unique-desc {
+  flex: 1;
+  color: var(--base-white);
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.unique-image-wrap {
+  flex: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 520px;
+}
+
+.unique-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+/* ============================================================
+   LEADERS SECTION
+   ============================================================ */
+.leaders-section {
+  background: var(--primary-900);
+  padding: 5rem 0;
+}
+
+.leaders-inner {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.leaders-heading {
+  flex: 1;
+}
+
+.leaders-heading h2 {
+  font-family: Futura, Inter, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: -0.02em;
+  color: var(--base-white);
+  text-transform: uppercase;
+}
+
+.leaders-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.leaders-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  overflow: visible;
+}
+
+.leader-card {
+  background: #1b2911;
+  border-radius: 1.5px;
+  padding: 24px 24px 24px 48px;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  position: relative;
+  overflow: visible;
+}
+
+.leader-card-icon {
+  position: absolute;
+  top: 16px;
+  left: -1.5rem;
+  width: 40px;
+  height: 40px;
+  background: var(--primary-500-base);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--base-white);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.leader-card-title {
+  font-family: Futura, Inter, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--base-white);
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.leader-card-desc {
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.leaders-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.leader-cta-text {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.75);
+  flex: 1;
+  min-width: 200px;
+}
+
+.leaders-btn {
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
 }
 
 /* ============================================================
