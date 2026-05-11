@@ -1165,7 +1165,7 @@ section {
 
 .boek-subtitle {
   font-family: Futura, Inter, sans-serif;
-  font-size: 18px;
+  font-size: 42px;
   font-weight: 500;
   color: var(--secondary-500);
   letter-spacing: 0.02em;
@@ -1185,7 +1185,7 @@ section {
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;
-  color: var(--gray-600);
+  color: var(--gray-500-base);
 }
 
 .boek-cta {
@@ -1199,12 +1199,13 @@ section {
   background: var(--primary-500-base);
   color: var(--base-white);
   border: none;
-  padding: 12px 28px;
+  padding: 12px 16px;
   font-family: Futura, Inter, sans-serif;
-  font-size: 15px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 500;
   letter-spacing: 0.04em;
   border-radius: 8px;
+  align-content: center;
 }
 .boek-btn-primary:hover {
   background: var(--primary-600);
@@ -1214,16 +1215,139 @@ section {
   background: transparent;
   color: var(--primary-500-base);
   border: 2px solid var(--primary-500-base);
-  padding: 12px 28px;
+  padding: 12px 16px;
   font-family: Futura, Inter, sans-serif;
-  font-size: 15px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 500;
   letter-spacing: 0.04em;
   border-radius: 8px;
+  align-content: center;
 }
 .boek-btn-outline:hover {
   background: var(--primary-50);
   transform: translateY(-2px);
+}
+
+/* ============================================================
+   HET PROGRAMMA SECTION
+   ============================================================ */
+.programma-section {
+  background: var(--primary-900);
+  padding: 5rem 0;
+}
+
+.programma-title {
+  color: var(--base-white);
+  margin-bottom: 16px;
+  font: 48px;
+}
+
+.programma-desc {
+  color: var(--gray-100);
+  margin-bottom: 32px;
+  line-height: 28px;
+}
+
+.programma-cards {
+  display: flex;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.programma-card-wrap {
+  flex: 1;
+  position: relative;
+}
+
+.programma-card-shadow {
+  position: absolute;
+  inset: -8px;
+  border-radius: 16px;
+}
+
+.programma-card-shadow--1 {
+  background: #efe7da14;
+  border: 1px solid rgba(180, 162, 102, 0.2);
+}
+
+.programma-card-shadow--2 {
+  background: rgba(148, 133, 82, 0.25);
+  border: 1px solid rgba(148, 133, 82, 0.2);
+}
+
+.programma-card-shadow--3 {
+  background: rgba(120, 90, 110, 0.3);
+  border: 1px solid rgba(120, 90, 110, 0.2);
+}
+
+.programma-card {
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.programma-card--1 {
+  background: #efe7da;
+  border: 1px solid rgba(180, 162, 102, 0.25);
+  color: var(--primary-900);
+}
+
+.programma-card--2 {
+  background: #937b63;
+  border: 1px solid rgba(148, 133, 82, 0.25);
+  color: var(--base-white);
+}
+
+.programma-card--3 {
+  background: #6c464e;
+  border: 1px solid rgba(120, 90, 110, 0.3);
+  color: var(--base-white);
+}
+
+.programma-card-deel {
+  font-family: Futura, Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.programma-card-title {
+  font-family: Futura, Inter, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.programma-card-list {
+  margin: 0.5rem 0 0 1rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.programma-card-list li {
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .programma-cards {
+    flex-direction: column;
+  }
 }
 
 /* ============================================================
@@ -1386,6 +1510,153 @@ section {
 }
 
 /* ============================================================
+   INITIATIEF SECTION
+   ============================================================ */
+.initiatief-section {
+  background: var(--base-white);
+  padding: 5rem 0;
+}
+
+.initiatief-title {
+  font-family: Futura, Inter, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: -0.02em;
+  color: var(--secondary-500);
+  text-transform: uppercase;
+}
+
+.initiatief-subtitle {
+  font-family: Futura, Inter, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: -0.02em;
+  color: var(--primary-500-base);
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+
+.initiatief-body {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.initiatief-image-wrap {
+  flex: 0 0 300px;
+  position: relative;
+  padding: 0 20px;
+  padding-bottom: 84px;
+}
+
+.initiatief-image-card-bg {
+  position: absolute;
+  top: 150px;
+  left: 0;
+  right: 0;
+  bottom: 84px;
+  background: var(--secondary-500);
+  border-radius: 16px 16px 0 0;
+  z-index: 0;
+}
+
+.initiatief-image-card {
+  position: relative;
+  z-index: 1;
+  border-radius: 16px 16px 0 0;
+
+  overflow: hidden;
+}
+
+.initiatief-image {
+  width: 100%;
+  display: block;
+  border-radius: 16px 16px 0 0;
+
+  object-fit: cover;
+}
+
+.initiatief-names {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  z-index: 2;
+  width: 100%;
+  justify-content: center;
+}
+
+.initiatief-name-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--primary-500-base);
+  color: var(--base-white);
+  padding: 11px 8px;
+  border-radius: 8px;
+  font-family: Inter, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  transition: background 0.2s;
+  width: 185px;
+}
+
+.initiatief-name-badge:hover {
+  background: var(--primary-600);
+}
+
+.initiatief-desc {
+  color: var(--gray-500-base, var(--gray-500-base, #667085));
+  /* Inter/text lg/regular */
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 155.556% */
+}
+
+.initiatief-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.initiatief-content p {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--gray-600);
+}
+
+.initiatief-btn {
+  margin-top: 64px;
+  align-self: flex-start;
+  background: var(--primary-500-base);
+  color: var(--base-white);
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 20px;
+  font-family: Futura, Inter, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  border-radius: 8px;
+}
+
+.initiatief-btn:hover {
+  background: var(--primary-600);
+}
+
+/* ============================================================
    BENEFITS
    ============================================================ */
 .benefits {
@@ -1394,64 +1665,104 @@ section {
 
 .benefits h2 {
   font-family: Futura, Inter, sans-serif;
-  font-size: 36px;
+  font-size: 48px;
   font-weight: 700;
   line-height: 44px;
   letter-spacing: -0.02em;
-  color: var(--secondary-500);
+  color: var(--primary-500-base);
   margin-bottom: 0.5rem;
+  text-transform: uppercase;
 }
 
 .benefits h2 span {
-  color: var(--primary-600);
+  color: var(--secondary-500);
+}
+
+.benefit-desc {
+  color: var(--gray-500-base, var(--gray-500-base, #667085));
+  /* Inter/text lg/regular */
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 155.556% */
+  margin-bottom: 40px;
 }
 
 .benefits-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.75rem;
+  gap: 16px;
   margin-top: 2rem;
 }
 
 .benefits-list li {
-  background: var(--secondary-500);
-  color: var(--base-white);
-  padding: 0.5rem 1.25rem;
-  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--gray-50);
+  color: var(--gray-500-base);
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+  border-radius: 16px;
   font-family: Inter, sans-serif;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 20px;
-  transition: background 0.25s;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
   cursor: default;
+  box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.04);
 }
+
 .benefits-list li:hover {
-  background: var(--primary-600);
+  border-color: var(--primary-400);
+  box-shadow: 0px 2px 8px rgba(138, 211, 96, 0.2);
+}
+
+.benefit-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: var(--primary-500-base);
+  border-radius: 8px;
+  color: var(--base-white);
+  flex-shrink: 0;
 }
 
 /* ============================================================
    INITIATIVE
    ============================================================ */
 .initiative {
-  background: var(--gray-50);
+  background: var(--primary-500-base);
+  height: 535px;
 }
 
 .initiative-inner {
-  max-width: 760px;
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.initiative-text {
+  max-width: 834px;
 }
 
 .initiative-text h2 {
   font-family: Futura, Inter, sans-serif;
-  font-size: 30px;
+  font-size: 48px;
   font-weight: 700;
-  line-height: 38px;
-  color: var(--secondary-500);
-  margin-bottom: 1.25rem;
+  line-height: 60px;
+  color: var(--secondary-600);
+  margin-bottom: 16px;
+  letter-spacing: -2%;
 }
 
 .initiative-text h2 span {
-  color: var(--primary-600);
+  color: var(--base-white);
 }
 
 .initiative-text p {
@@ -1459,8 +1770,27 @@ section {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-  color: var(--gray-600);
-  white-space: pre-line;
+  color: #fff;
+}
+
+.initiative-img {
+  position: relative;
+  z-index: 1;
+  right: 0;
+}
+
+.initiatief-btn {
+  margin-top: 32px;
+  background: var(--base-white);
+  color: var(--primary-500-base);
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 20px;
+  font-family: Futura, Inter, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 100%;
+  border-radius: 8px;
 }
 
 /* ============================================================
