@@ -31,11 +31,11 @@
         </div>
       </div>
       <img class="flying-book" src="assets/image/book.svg" alt="book" />
+      <h4 class="bg-text" style="top: 410px">
+        Leidinggeven <br />
+        met en zonder ego
+      </h4>
     </section>
-    <h4 class="bg-text" style="bottom: 200px">
-      Leidinggeven <br />
-      met en zonder ego
-    </h4>
     <!-- TRAINING -->
     <section class="training" id="training">
       <div class="container">
@@ -59,7 +59,7 @@
         </p>
         <a href="#contact" class="btn contact-button">CONTACT</a>
       </div>
-      <h4 class="bg-text" style="top: 94%">
+      <h4 class="bg-text" style="top: 290px">
         Leidinggeven <br />
         met en zonder ego
       </h4>
@@ -93,7 +93,7 @@
         </p>
         <a href="#contact" class="btn feature-button">INSCHRIJVEN</a>
       </div>
-      <h4 class="bg-text" style="top: 152%">
+      <h4 class="bg-text" style="top: 400px">
         Leidinggeven <br />
         met en zonder ego
       </h4>
@@ -331,7 +331,7 @@
           </div>
         </div>
       </div>
-      <h4 class="bg-text" style="top: 305%">
+      <h4 class="bg-text" style="top: 145px">
         Leidinggeven <br />
         met en zonder ego
       </h4>
@@ -704,7 +704,7 @@
 
     <!-- CONTACT -->
     <section class="contact" id="contact">
-      <h4 class="bg-text">
+      <h4 class="bg-text" style="top: -40px">
         Leidinggeven <br />
         met en zonder ego
       </h4>
@@ -841,6 +841,89 @@
         </p>
       </div>
     </footer>
+
+    <!-- KENNISMAKING MODAL -->
+    <div
+      class="modal-overlay"
+      id="kennismakingModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+    >
+      <div class="modal-box">
+        <button class="modal-close" id="modalClose" aria-label="Sluiten">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+          >
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+        <div class="modal-header">
+          <h2 class="contact-title" id="modalTitle">
+            ONTVANG PERSOONLIJK ADVIES VOOR OPTIMAAL LEIDERSCHAP
+          </h2>
+          <p class="contact-desc">
+            Wil jij vrijblijvend sparren over de mogelijkheden om optimaal te
+            functioneren als leidinggevende? Ik bel je graag terug.
+          </p>
+        </div>
+        <form id="kennismakingForm" novalidate>
+          <div class="contact-form" style="background: #fff; margin-top: 0">
+            <div
+              class="form-row-single"
+              style="display: flex; flex-direction: column; gap: 8px"
+            >
+              <div>
+                <p>Naam <span style="color: red">*</span></p>
+                <input
+                  type="text"
+                  id="modalNaam"
+                  placeholder="typ hier"
+                  class="inter-text-md-base-regular input-field"
+                  required
+                />
+              </div>
+              <div>
+                <p>Email-adres <span style="color: red">*</span></p>
+                <input
+                  type="email"
+                  id="modalEmail"
+                  placeholder="typ hier"
+                  class="inter-text-md-base-regular input-field"
+                  required
+                />
+              </div>
+              <div>
+                <p>Telefoonnummer <span style="color: red">*</span></p>
+                <input
+                  type="tel"
+                  id="modalTel"
+                  placeholder="typ hier"
+                  class="inter-text-md-base-regular input-field"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <div class="contact-footer modal-footer" style="background: #fff">
+            <button type="button" class="modal-cancel" id="modalCancel">
+              ANNULEREN
+            </button>
+            <button type="submit" class="btn futura-button-large contact-btn">
+              VERSTUREN
+              <img src="assets/image/sent.svg" alt="" />
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
 
     <script src="js/main.js"></script>
   </body>
