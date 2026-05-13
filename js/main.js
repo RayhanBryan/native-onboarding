@@ -275,18 +275,37 @@ const modalClose = document.getElementById("modalClose");
 const modalCancel = document.getElementById("modalCancel");
 const kennismakingForm = document.getElementById("kennismakingForm");
 
+let scrollY = 0;
+
 function openModal() {
   modal.classList.add("active");
   document.body.style.overflow = "hidden";
+  scrollY = window.scrollY;
+
+  document.body.classList.add("modal-open");
+  document.body.style.top = `-${scrollY}px`;
 }
 
 function closeModal() {
   modal.classList.remove("active");
   document.body.style.overflow = "";
+  document.body.style.top = "";
+  document.body.classList.remove("modal-open");
+  window.scrollTo({
+    top: scrollY,
+    behavior: "instant",
+  });
 }
 
 // Attach to all plan-button links (KENNISMAKING PLANNEN)
 document.querySelectorAll(".plan-button").forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    openModal();
+  });
+});
+
+document.querySelectorAll(".plan-ken-button").forEach((btn) => {
   btn.addEventListener("click", (e) => {
     e.preventDefault();
     openModal();
@@ -311,4 +330,54 @@ kennismakingForm.addEventListener("submit", (e) => {
   closeModal();
   kennismakingForm.reset();
   alert("Bedankt! We nemen zo snel mogelijk contact met u op.");
+});
+
+// Callback Modal
+
+const callbackModal = document.getElementById("callbackModal");
+const callbackModalCancel = document.getElementById("callbackModalCancel");
+const callbackForm = document.getElementById("callbackForm");
+
+let scrollYCallback = 0;
+
+function openCallbackModal() {
+  console.log("Opening callback modal");
+  callbackModal.classList.add("active");
+  document.body.style.overflow = "hidden";
+  scrollYCallback = window.scrollY;
+
+  document.body.classList.add("modal-open");
+  document.body.style.top = `-${scrollYCallback}px`;
+}
+
+function closeCallbackModal() {
+  console.log("Closing callback modal");
+  callbackModal.classList.remove("active");
+  document.body.style.overflow = "";
+  document.body.style.top = "";
+  document.body.classList.remove("modal-open");
+  window.scrollTo({
+    top: scrollYCallback,
+    behavior: "instant",
+  });
+}
+
+document.querySelectorAll(".callback-button").forEach((btn) => {
+  console.log("Attaching callback modal to button", btn);
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    openCallbackModal();
+  });
+});
+
+callbackModalCancel.addEventListener("click", closeCallbackModal);
+
+// Callback tabs
+document.querySelectorAll("#callbackTabs .callback-tab").forEach((tab) => {
+  tab.addEventListener("click", () => {
+    document
+      .querySelectorAll("#callbackTabs .callback-tab")
+      .forEach((t) => t.classList.remove("active"));
+    tab.classList.add("active");
+  });
 });
