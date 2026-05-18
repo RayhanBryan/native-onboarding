@@ -1,0 +1,15 @@
+{
+  "folders": [
+	{
+		"name": "native",
+		"path": "."
+	},
+	{
+		"name": "futura",
+		"path": "C:/Users/USER/Downloads/futura/futura"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "native"
+  }
+}

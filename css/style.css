@@ -545,9 +545,17 @@ ul {
    LAYOUT
    ============================================================ */
 .container {
-  padding: 0 80px;
   position: relative;
   z-index: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.main-page {
+  display: flex;
+  flex-direction: column;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 section {
@@ -571,10 +579,6 @@ section {
   transition:
     background 0.25s,
     transform 0.2s;
-}
-.btn:hover {
-  background: var(--primary-600);
-  transform: translateY(-2px);
 }
 
 .btn-nav {
@@ -615,12 +619,6 @@ section {
   background: var(--primary-500-base);
   box-shadow: 0px 2px 4px rgba(16, 24, 40, 0.04);
   z-index: 100;
-  padding: 1rem 0;
-  display: flex;
-  justify-content: space-between;
-  padding-left: 80px;
-  padding-right: 80px;
-  align-items: center;
 }
 
 .nav-inner {
@@ -760,6 +758,10 @@ section {
   display: flex;
   gap: 8px;
   width: fit-content;
+}
+
+.contact-button:hover {
+  background: var(--Base-white, #fff);
 }
 
 .flying-book {
@@ -1726,7 +1728,7 @@ section {
   padding: 0.5rem 1rem 0.5rem 0.5rem;
   border-radius: 16px;
   font-family: Inter, sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 20px;
   transition:
