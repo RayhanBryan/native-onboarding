@@ -2529,7 +2529,7 @@ body.modal-open {
 /* ============================================================
    RESPONSIVE
    ============================================================ */
-@media (max-width: 821px) {
+@media (max-width: 1024px) {
   /* ---- GLOBAL ---- */
   img {
     max-width: 100%;
@@ -2538,7 +2538,7 @@ body.modal-open {
 
   /* ---- LAYOUT ---- */
   .container {
-    padding: 0 20px;
+    padding: 0 40px;
   }
 
   section {
@@ -2592,9 +2592,8 @@ body.modal-open {
 
   .flying-book {
     width: 180px;
-    top: auto;
+    top: 280px;
     bottom: 0;
-    right: -20px;
   }
 
   /* ---- TRAINING ---- */
