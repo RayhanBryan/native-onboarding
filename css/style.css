@@ -620,6 +620,8 @@ section {
   background: var(--primary-500-base);
   box-shadow: 0px 2px 4px rgba(16, 24, 40, 0.04);
   z-index: 100;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .nav-inner {
@@ -2550,6 +2552,10 @@ body.modal-open {
     padding-left: 20px;
     padding-right: 20px;
     gap: 8px;
+    justify-content: center;
+  }
+
+  .nav-inner {
     justify-content: center;
   }
 
